@@ -1,0 +1,158 @@
+@font-face {
+  src: url("../fonts/Huji-Regular.otf");
+  font-family: Huji-regular;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  direction: rtl;
+  font-family: "Assistant", sans-serif;
+}
+
+body {
+  background-color: #96cae7;
+  overflow: hidden;
+  height: 100vh;
+  /* background: url(/img/bg-1.jpg) no-repeat center / cover; */
+}
+
+.main {
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.title-section {
+  margin-bottom: 2rem;
+}
+.title {
+  font-family: Huji-regular;
+  color: #1a1f49;
+}
+.title.welcome {
+  font-size: 1.7rem;
+}
+.title.campus {
+  color: #1477b8;
+  font-size: 3.1rem;
+}
+.title.welcome:last-child {
+  color: #1477b8;
+  font-size: 2.1rem;
+}
+.logo-line {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+.logos-flex {
+  width: 100%;
+  padding: 20px;
+}
+.uni-logos,
+.logos-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+img.logo.logo-uni {
+  height: 100px;
+}
+img.logo.logo-agi {
+  height: 70px;
+  border-radius: 5px;
+}
+img.logo.logo-10dance {
+  height: 70px;
+}
+h2.title.cta {
+  margin-bottom: 0.7rem;
+  font-size: 1.7rem;
+}
+span.without {
+  color: rgb(130, 14, 43);
+}
+
+#input-text {
+  direction: ltr;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.2rem;
+  border-radius: 50px;
+  border: 0;
+  width: 17rem;
+  font-family: "Assistant", sans-serif;
+  padding: 0.4rem 0.5rem;
+  background: rgba(255, 255, 255, 0.6);
+  color: #065f9a;
+  transition: all 100ms ease-in;
+  line-height: 1rem;
+}
+#input-text:focus {
+  outline: 0;
+  border-color: #286eba;
+}
+
+.numpad {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+}
+
+.numpad #submit {
+  width: 100%;
+  background-color: #1cc78b;
+  margin-top: 20px;
+}
+
+.numpad .row {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  width: 5rem;
+  height: 5rem;
+  margin: 0.2rem;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 0.8rem;
+  border: #1a1f49 2px solid;
+  cursor: pointer;
+}
+
+button:active {
+  background-color: #1a1f49;
+  color: #fff;
+  transition: 100ms;
+  transform: scale(0.9);
+}
+
+/* injected objects!!!------------- */
+
+.has-arrived {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(rgba(1, 1, 1, 0.7), rgba(1, 1, 1, 0.7));
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 3rem;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>10Dance</title>
+        <link rel="stylesheet" href="./client/style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <script
+            src="https://kit.fontawesome.com/d35887ce90.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <div class="main">
+            <div class="title wrapper">
+                <div class="title-section">
+                    <h1 class="title welcome">ברוכים הבאים</h1>
+                    <h1 class="title campus">ייום אוריינטציה לעובדים חדשים</h1>
+                    <h1 class="title welcome">האוניברסיטה העברית</h1>
+                </div>
+                <div class="logo-line">
+                    <div class="logos-flex">
+                        <div class="uni-logos">
+                            <img
+                                class="logo logo-uni"
+                                src="./client/img/uni_logo.png"
+                                alt=""
+                                srcset=""
+                            />
+                        </div>
+                        <img
+                            class="logo logo-10dance"
+                            src="../img/logo.png"
+                            alt=""
+                            srcset=""
+                        />
+                    </div>
+                </div>
+            </div>
+            <h2 class="title cta">
+                נא הכנס ת.ז. מלאה <span class="without">כולל</span> ספרת ביקורת
+            </h2>
+            <input id="input-text" type="text" />
+            <div class="numpad">
+                <button id="submit"><i class="fa-solid fa-check"></i></button>
+                <div class="row row4">
+                    <button id="delete">
+                        <i class="fa-solid fa-angle-left"></i>
+                    </button>
+                    <button class="btn">0</button>
+                    <button id="delete-all">
+                        <i class="fa-regular fa-trash-can"></i>
+                    </button>
+                </div>
+                <div class="row row1">
+                    <button class="btn">1</button>
+                    <button class="btn">2</button>
+                    <button class="btn">3</button>
+                </div>
+                <div class="row row2">
+                    <button class="btn">4</button>
+                    <button class="btn">5</button>
+                    <button class="btn">6</button>
+                </div>
+                <div class="row row3">
+                    <button class="btn">7</button>
+                    <button class="btn">8</button>
+                    <button class="btn">9</button>
+                </div>
+            </div>
+            <footer></footer>
+        </div>
+        <script type="module" defer src="./script/script.js"></script>
+    </body>
+</html>
