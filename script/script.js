@@ -14,46 +14,48 @@ displayElement.classList.add("has-arrived");
 
 // MAIN BUTTONS EVENT-LISTENERS //
 for (let i = 0; i < btnAll.length; i++) {
-  btnAll[i].onclick = () => {
-      if (inputText.value.length < 9) inputText.value += btnAll[i].innerHTML;
+    btnAll[i].onclick = () => {
+        if (inputText.value.length < 9) inputText.value += btnAll[i].innerHTML;
     };
 }
 
 deleteAll.onclick = () => {
-  inputText.value = "";
+    inputText.value = "";
 };
 deleteOne.onclick = () => {
-  let str = inputText.value;
-  str = str.substr(0, str.length - 1);
-  inputText.value = str;
+    let str = inputText.value;
+    str = str.substr(0, str.length - 1);
+    inputText.value = str;
 };
 
 // SUBMIT EVENT-LISTENER //
 submit.onclick = (e) => {
-  e.preventDefault();
-  const validId = inputValidationId(inputText.value)
-  if (validId) {submitToAPI(validId)}
+    e.preventDefault();
+    const validId = inputValidationId(inputText.value);
+    if (validId) {
+        submitToAPI(validId);
+    }
 };
 
 const submitToAPI = async (t_z_id) => {
-  displayMessage("אנא המתן...")
-  const attendee = await getAttendeeFromDB(t_z_id);
-  if (attendee) {
-    await setAttendeeArrived(t_z_id);
-    displayMessage("נרשמת בהצלחה")
-    setTimeout(() => {
-      printAttendee(t_z_id, clientURL);
-    }, 700);
-  } else {
-    displayMessage("אינך רשום במערכת, אנא גש לעמדת הרישום")
-    setTimeout((e) => {
-      displayElement.remove();
-      inputText.value = "";
-    }, 2000);
-  }
+    displayMessage("אנא המתן...");
+    const attendee = await getAttendeeFromDB(t_z_id);
+    if (attendee) {
+        await setAttendeeArrived(t_z_id);
+        displayMessage("נרשמת בהצלחה");
+        setTimeout(() => {
+            printAttendee(t_z_id, clientURL);
+        }, 700);
+    } else {
+        displayMessage("אינך רשום במערכת, אנא גש לעמדת הרישום");
+        setTimeout((e) => {
+            displayElement.remove();
+            inputText.value = "";
+        }, 2000);
+    }
 };
 
-function displayMessage (message) {
-  displayElement.innerHTML = `<h1>${message}</h1>`;
-  document.body.append(displayElement);
+function displayMessage(message) {
+    displayElement.innerHTML = `<h1>${message}</h1>`;
+    document.body.append(displayElement);
 }

@@ -35,5 +35,14 @@ switch ($_SERVER["REQUEST_METHOD"]) {
     } else {
       http_response_code(500);
     }
+
+    // זו הבדיקה שצריך לעשות לאחר הכנסת מידע חדש
+    // יש לבדוק האם חזרה תשובה חיובית
+    //   if (mysqli_query($conn, $sql)) {
+    //     header('location: index.php');
+    // } else {
+    //     echo "query error:" . mysqli_error($conn);
+    // }
+
     break;
 }
