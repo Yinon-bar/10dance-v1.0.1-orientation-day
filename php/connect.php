@@ -9,8 +9,7 @@ header('Content-Type: text/html; charset=utf-8');
 $dbhost = "localhost";
 $dbuser = "root";
 $dbpass = "";
-$dbname = "hebrew_uni";
-
+$dbname = "10dance";
 
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 if (mysqli_connect_error()) {

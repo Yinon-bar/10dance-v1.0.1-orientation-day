@@ -7,7 +7,7 @@ header('Content-Type: application/json');
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: PUT");
 
-$query = "SELECT * FROM geo ";
+$query = "SELECT * FROM students ";
 
 // conn.query();
 // מחזיר את כל המידע שקיבל מהדי בי
